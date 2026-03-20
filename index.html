@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张家界胜华环保科技有限公司 - 专业环保设备制造商</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(180deg, #e8f5e9 0%, #c8e6c9 30%, #a5d6a7 60%, #81c784 100%);
+            min-height: 100vh;
+            color: #2e7d32;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(76, 175, 80, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(67, 160, 71, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(56, 142, 60, 0.1) 0%, transparent 50%);
+            animation: breathe 8s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .leaf-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 100c-25-25-50-50-50-75 0-15 10-25 25-25s25 10 25 25c0-15 10-25 25-25s25 10 25 25c0 25-25 50-50 75z' fill='%232e7d32'/%3E%3C/svg%3E");
+            background-size: 150px 150px;
+            animation: floatLeaves 20s linear infinite;
+        }
+
+        @keyframes floatLeaves {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50px); }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 70px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 245, 233, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 45px 70px;
+            border: 4px solid #81c784;
+            box-shadow: 
+                0 20px 60px rgba(46, 125, 50, 0.15),
+                inset 0 2px 0 rgba(255, 255, 255, 0.5);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo::before {
+            content: '🌿';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            font-size: 120px;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+
+        .logo h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2e7d32 0%, #43a047 50%, #4caf50 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 2rem;
+            color: #388e3c;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: #66bb6a;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.9;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 90px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(232, 245, 233, 0.9) 100%);
+            padding: 35px 45px;
+            border-radius: 25px;
+            border: 3px solid #a5d6a7;
+            box-shadow: 0 10px 30px rgba(46, 125, 50, 0.12);
+            animation: slideUp 0.8s ease-out;
+            animation-fill-mode: both;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(46, 125, 50, 0.2);
+        }
+
+        .stat-box:nth-child(1) { animation-delay: 0.1s; }
+        .stat-box:nth-child(2) { animation-delay: 0.2s; }
+        .stat-box:nth-child(3) { animation-delay: 0.3s; }
+        .stat-box:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            color: #66bb6a;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .products-section {
+            margin-bottom: 90px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 55px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: #2e7d32;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: #66bb6a;
+            font-size: 1.15rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 35px;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 245, 233, 0.95) 100%);
+            border-radius: 30px;
+            padding: 45px 35px;
+            border: 3px solid #a5d6a7;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(46, 125, 50, 0.12);
+        }
+
+        .product-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .product-card:hover::after {
+            opacity: 1;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 30px 70px rgba(46, 125, 50, 0.2);
+            border-color: #81c784;
+        }
+
+        .product-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #81c784 0%, #66bb6a 100%);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-card h3 {
+            color: #2e7d32;
+            font-size: 1.7rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-card p {
+            color: #66bb6a;
+            line-height: 1.9;
+            font-size: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .showcase {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(232, 245, 233, 0.9) 100%);
+            border-radius: 35px;
+            padding: 60px;
+            margin-bottom: 90px;
+            border: 3px solid #a5d6a7;
+            box-shadow: 0 20px 60px rgba(46, 125, 50, 0.15);
+        }
+
+        .showcase h2 {
+            text-align: center;
+            color: #2e7d32;
+            font-size: 2.6rem;
+            margin-bottom: 50px;
+            font-weight: 800;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-card {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            box-shadow: 0 15px 40px rgba(46, 125, 50, 0.2);
+            transition: transform 0.4s ease;
+            border: 3px solid #c8e6c9;
+        }
+
+        .gallery-card:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 35px;
+            background: linear-gradient(transparent, rgba(46, 125, 50, 0.95));
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-card:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h4 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .gallery-overlay p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-bottom: 90px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(232, 245, 233, 0.9) 100%);
+            border-radius: 25px;
+            padding: 35px 28px;
+            border-left: 6px solid;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(46, 125, 50, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateX(10px) translateY(-5px);
+            box-shadow: 0 20px 50px rgba(46, 125, 50, 0.2);
+        }
+
+        .feature-card:nth-child(1) { border-color: #66bb6a; }
+        .feature-card:nth-child(2) { border-color: #81c784; }
+        .feature-card:nth-child(3) { border-color: #a5d6a7; }
+        .feature-card:nth-child(4) { border-color: #66bb6a; }
+        .feature-card:nth-child(5) { border-color: #81c784; }
+        .feature-card:nth-child(6) { border-color: #a5d6a7; }
+
+        .feature-card h4 {
+            color: #2e7d32;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: #66bb6a;
+            line-height: 1.85;
+            font-size: 0.98rem;
+        }
+
+        .contact-section {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 245, 233, 0.95) 100%);
+            border-radius: 35px;
+            padding: 60px 70px;
+            border: 3px solid #81c784;
+            box-shadow: 0 20px 60px rgba(46, 125, 50, 0.15);
+            margin-bottom: 90px;
+        }
+
+        .contact-section h2 {
+            color: #2e7d32;
+            font-size: 2.6rem;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+
+        .contact-section p {
+            color: #66bb6a;
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+            line-height: 1.8;
+        }
+
+        .contact-btn {
+            background: linear-gradient(135deg, #66bb6a 0%, #81c784 50%, #a5d6a7 100%);
+            color: #1b5e20;
+            border: none;
+            padding: 22px 70px;
+            border-radius: 55px;
+            font-size: 1.35rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+            border: 3px solid #c8e6c9;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(76, 175, 80, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 45px;
+            color: #66bb6a;
+            font-size: 0.95rem;
+        }
+
+        .nature-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .leaf {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.15;
+            animation: fall 15s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.15;
+            }
+            90% {
+                opacity: 0.15;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="leaf-pattern"></div>
+        <div class="nature-elements" id="natureElements"></div>
+        
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <h1>张家界胜华环保科技有限公司</h1>
+                </div>
+                <p class="tagline">专业环保设备制造商 · 绿色科技守护蓝天</p>
+                <p class="subtitle">专注环保设备研发制造，为建设美丽中国贡献力量</p>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-box">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">年行业经验</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">产品型号</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">80+</span>
+                    <span class="stat-label">合作伙伴</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">环保认证</span>
+                </div>
+            </div>
+            
+            <div class="products-section">
+                <div class="section-header">
+                    <h2>核心产品</h2>
+                    <p>专业环保设备，助力绿色发展</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-icon">🌬️</div>
+                        <h3>废气处理设备</h3>
+                        <p>专业研发各类废气处理设备，包括活性炭吸附、催化燃烧、RTO等，有效净化工业废气。</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-icon">💧</div>
+                        <h3>污水处理设备</h3>
+                        <p>提供一体化污水处理设备、膜生物反应器等，实现工业和生活污水的高效处理。</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-icon">♻️</div>
+                        <h3>固废处理设备</h3>
+                        <p>研发垃圾分类处理、垃圾焚烧、固废资源化利用等设备，推进循环经济发展。</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-icon">🔊</div>
+                        <h3>噪音控制设备</h3>
+                        <p>提供隔音屏障、消声器、降噪设备等，有效控制工业和生活噪音污染。</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-icon">📊</div>
+                        <h3>环境监测设备</h3>
+                        <p>开发在线环境监测系统，实时监测空气质量、水质、噪音等环境指标。</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-icon">🌱</div>
+                        <h3>生态修复设备</h3>
+                        <p>提供土壤修复、水体生态修复、矿山生态恢复等专业设备和服务。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="showcase">
+                <h2>生产实力</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=800" alt="绿色生产">
+                        <div class="gallery-overlay">
+                            <h4>绿色生产</h4>
+                            <p>采用环保材料和清洁生产技术</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800" alt="精密制造">
+                        <div class="gallery-overlay">
+                            <h4>精密制造</h4>
+                            <p>先进设备确保产品质量</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="技术研发">
+                        <div class="gallery-overlay">
+                            <h4>技术研发</h4>
+                            <p>持续创新，推动环保技术进步</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800" alt="质量检测">
+                        <div class="gallery-overlay">
+                            <h4>质量检测</h4>
+                            <p>严格的质量控制体系</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-section">
+                <div class="feature-card">
+                    <h4>专业团队</h4>
+                    <p>拥有经验丰富的环保工程团队，提供专业的技术支持和解决方案。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>品质保障</h4>
+                    <p>通过ISO14001等环保认证，建立完善的质量管理体系。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>技术创新</h4>
+                    <p>持续投入研发，开发新型环保设备，引领行业发展。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>绿色理念</h4>
+                    <p>坚持绿色发展理念，为客户提供环保、高效的解决方案。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>优质服务</h4>
+                    <p>提供从设计、制造到安装调试的一站式服务。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>可持续发展</h4>
+                    <p>致力于环保事业发展，推动社会可持续发展。</p>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <h2>联系我们</h2>
+                <p>专业的团队，优质的产品，与您共建绿色未来</p>
+                <button class="contact-btn">立即咨询</button>
+            </div>
+            
+            <footer>
+                <p>&copy; 2024 张家界胜华环保科技有限公司 版权所有</p>
+            </footer>
+        </div>
+    </div>
+    
+    <script>
+        // 创建飘落的叶子效果
+        const natureElements = document.getElementById('natureElements');
+        const leafEmojis = ['🍃', '🌿', '🍂', '🌱', '☘️'];
+        
+        for (let i = 0; i < 20; i++) {
+            const leaf = document.createElement('div');
+            leaf.className = 'leaf';
+            leaf.textContent = leafEmojis[Math.floor(Math.random() * leafEmojis.length)];
+            leaf.style.left = Math.random() * 100 + '%';
+            leaf.style.animationDelay = (Math.random() * 15) + 's';
+            leaf.style.animationDuration = (12 + Math.random() * 8) + 's';
+            leaf.style.fontSize = (30 + Math.random() * 30) + 'px';
+            natureElements.appendChild(leaf);
+        }
+        
+        // 产品卡片进入动画
+        document.querySelectorAll('.product-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(40px)';
+            setTimeout(() => {
+                card.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 200 + index * 100);
+        });
+    </script>
+</body>
+</html>
